@@ -1,0 +1,14 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 180deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}

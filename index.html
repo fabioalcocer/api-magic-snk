@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SNK - Magic Videos</title>
+  </head>
+  <body>
+    <main class="main">
+      <header class="main__header">
+        <img
+          src="./assets/logo-header.png"
+          alt="logo snk"
+          class="header__logo"
+        />
+        <h2 class="header__title">SNK Moments</h2>
+      </header>
+
+      <!--=============== FILTERS TABS ===============-->
+      <ul class="filters__content">
+        <button class="filters__button filter-tab-active" data-target="#humans">
+          HUMANS
+        </button>
+        <button class="filters__button" data-target="#titans">TITANS</button>
+      </ul>
+
+      <!--=============== HUMANS ===============-->
+      <section
+        class="container__cards filters__active"
+        data-content
+        id="humans"
+      >
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+        <div class="card">
+          <img class="char-img" src="./assets/character.png" />
+        </div>
+      </section>
+
+      <!--=============== TITANS ===============-->
+      <section class="container__cards" data-content id="titans">
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+      </section>
+
+      <footer class="main__footer">
+        <p>&#169; 2022 Fabio Alcocer All rights reserved.</p>
+      </footer>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
