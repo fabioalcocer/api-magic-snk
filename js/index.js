@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   AOS.init();
   filters.filterData()
   fetchData()
+  revealImages()
 })
 
 
@@ -29,9 +30,30 @@ const fetchData = async () => {
 };
 
 
-const getData = async (data) => {
-  const datos = await data
-  console.log(datos.at(-1));
+const getData = async (info) => {
+  const data = info
+  const humans = document.getElementById('humans')
+  const cardHumanTemplate = document.getElementById('template-human').content
+  const fragment = document.createDocumentFragment()
+
+  data.forEach((character) => {
+    const clone = cardHumanTemplate.cloneNode(true)
+    clone.querySelector('img').src = character.picture_url
+    // console.log(character);
+
+    fragment.appendChild(clone)
+  })
+
+  humans.appendChild(fragment)
+}
+
+const revealImages = async () => {
+  setTimeout(() => {
+    const image = document.querySelectorAll('.char-img')
+    image.forEach((img) => {
+      img.style.opacity = '1'
+    })
+  }, 10000);
 }
 
 const loadingData = (bool) => {
