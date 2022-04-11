@@ -1,39 +1,43 @@
-const titans = document.querySelectorAll('#card-titan')
-const arrayTitans = [...titans]
+import { filters } from './filters.js'
 
-const firstCard = document.getElementById('cartita')
-firstCard.setAttribute('data-aos-delay', '400')
-
-
-AOS.init();
-
-/*=============== FILTERS TABS ===============*/
-const tabs = document.querySelectorAll('[data-target]')
-const tabContents = document.querySelectorAll('[data-content]')
-
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.target)
-
-    tabContents.forEach(tc => {
-      tc.classList.remove('filters__active')
-    })
-
-    target.classList.add('filters__active')
-
-    tabs.forEach(t => {
-      t.classList.remove('filter-tab-active')
-    })
-
-    tab.classList.add('filter-tab-active')
-
-
-    // console.log(tab.dataset.target);
-
-    // if (tab.dataset.target === "#titans") {
-    //   arrayTitans.forEach(titan => {
-    //     console.log(titan);
-    //   })
-    // }
-  })
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init();
+  filters.filterData()
+  fetchData()
 })
+
+
+/*=============== FETCH DATA ===============*/
+const URL = "http://attackontitanapi.herokuapp.com/api/characters"
+
+const fetchData = async () => {
+
+  try {
+    loadingData(true);
+    const res = await fetch(URL);
+    const data = await res.json();
+    console.log("content");
+
+    getData(data)
+  }
+  catch (error) {
+    console.log(error);
+  }
+  finally {
+    loadingData(false);
+  }
+};
+
+
+const getData = async (data) => {
+  const datos = await data
+  console.log(datos.at(-1));
+}
+
+const loadingData = (bool) => {
+  if (bool) {
+    console.log("Loading...");
+  } else {
+    console.log("Fin del loading");
+  }
+}

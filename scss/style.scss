@@ -190,6 +190,15 @@ body {
   }
 }
 
+.char-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  opacity: 0;
+  transition: .7s;
+}
+
 /* <--------- FOOTER ---------> */
 
 .main__footer {
@@ -199,15 +208,6 @@ body {
   text-align: center;
   color: #bac0c4;
   font-size: calc(.7em + .2vw);
-}
-
-.char-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  opacity: 0;
-  transition: .7s;
 }
 
 /* <--------- SCROLL ---------> */
@@ -227,5 +227,10 @@ body {
   background-color: hsl(207, 8%, 44%);
 }
 
+@media (max-width: 768px) {
+  .char-img {
+    opacity: 1;
+  }
+}
 @import "./keyframes";
 @import "./modal"

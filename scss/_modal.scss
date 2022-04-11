@@ -1,5 +1,4 @@
 /* <--------- MODAL STYLES ---------> */
-
 .modal {
   position: fixed;
   top: 0;
@@ -7,17 +6,14 @@
   left: 0;
   right: 0;
   background-color: #212534;
-  backdrop-filter: blur(2);
-  display: flex;
-  --opacity: 0;
+  display: none;
   --pointer: none;
-  opacity: var(--opacity);
   pointer-events: var(--pointer);
   transition: opacity 0.5s;
 }
 
 .modal:target {
-  --opacity: 1;
+  display: flex;
   --pointer: unset;
 }
 
@@ -136,7 +132,7 @@
 }
 
 
-/* <--------- KEYFRAMES ---------> */
+/* <--------- KEYFRAMES MODAL ---------> */
 
 @keyframes show {
   0% {

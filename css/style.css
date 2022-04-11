@@ -170,6 +170,15 @@ body {
   opacity: 1;
 }
 
+.char-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.7s;
+}
+
 /* <--------- FOOTER ---------> */
 .main__footer {
   width: 100%;
@@ -178,15 +187,6 @@ body {
   text-align: center;
   color: #bac0c4;
   font-size: calc(0.7em + 0.2vw);
-}
-
-.char-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  object-fit: cover;
-  opacity: 0;
-  transition: 0.7s;
 }
 
 /* <--------- SCROLL ---------> */
@@ -205,6 +205,11 @@ body {
   background-color: #677179;
 }
 
+@media (max-width: 768px) {
+  .char-img {
+    opacity: 1;
+  }
+}
 /* <--------- ANIMATION LIGHTS CARDS---------> */
 @property --rotate {
   syntax: "<angle>";
@@ -227,17 +232,14 @@ body {
   left: 0;
   right: 0;
   background-color: #212534;
-  backdrop-filter: blur(2);
-  display: flex;
-  --opacity: 0;
+  display: none;
   --pointer: none;
-  opacity: var(--opacity);
   pointer-events: var(--pointer);
   transition: opacity 0.5s;
 }
 
 .modal:target {
-  --opacity: 1;
+  display: flex;
   --pointer: unset;
 }
 
@@ -355,7 +357,7 @@ body {
   transition: 0.5s;
 }
 
-/* <--------- KEYFRAMES ---------> */
+/* <--------- KEYFRAMES MODAL ---------> */
 @keyframes show {
   0% {
     transform: translateY(-150vh);
