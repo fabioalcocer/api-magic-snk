@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>SNK - Magic Videos</title>
   </head>
@@ -38,11 +39,18 @@
         data-content
         id="humans"
       >
-        <a href="#modal">
+        <a
+          id="cartita"
+          data-aos="fade-zoom-in"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          href="#modal"
+        >
           <div class="card">
             <img class="char-img" src="./assets/character.png" />
           </div>
         </a>
+        
         <div class="card">
           <img class="char-img" src="./assets/character.png" />
         </div>
@@ -115,13 +123,18 @@
     <section id="modal" class="modal">
       <div class="modal__container">
         <figure class="modal__picture">
-          <img src="./assets/character.png" class="modal__img">
+          <img src="./assets/character.png" class="modal__img" />
         </figure>
         <div class="modal__body">
           <h2 class="modal__title">Eren Jeager</h2>
           <p class="modal__paragraph">Male</p>
-          <p class="modal__description">The Attack Titan is exceptionally excellent in combat, but what makes its special is its constant longing for freedom and ability to see the future.</p>
-          <a href="./videos/video.html" class="modal__video">See best moment!
+          <p class="modal__description">
+            The Attack Titan is exceptionally excellent in combat, but what
+            makes its special is its constant longing for freedom and ability to
+            see the future.
+          </p>
+          <a href="./videos/video.html" class="modal__video"
+            >See best moment!
             <i class="fas fa-external-link-alt"></i>
           </a>
           <a href="#header" class="modal__close">Close</a>
@@ -129,7 +142,11 @@
       </div>
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/index.js"></script>
-    <script src="https://kit.fontawesome.com/17a53f75f7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/17a53f75f7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

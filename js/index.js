@@ -1,7 +1,11 @@
-const logo = document.querySelector('.header__logo')
 const titans = document.querySelectorAll('#card-titan')
 const arrayTitans = [...titans]
 
+const firstCard = document.getElementById('cartita')
+firstCard.setAttribute('data-aos-delay', '400')
+
+
+AOS.init();
 
 /*=============== FILTERS TABS ===============*/
 const tabs = document.querySelectorAll('[data-target]')
