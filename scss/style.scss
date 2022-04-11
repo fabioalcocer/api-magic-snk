@@ -66,7 +66,7 @@ body {
   min-width: 290px;
   margin: 2.5rem auto;
   background: linear-gradient(90deg, $title 0%, #ff04049f 100%);
-  background: $bg-primary;
+  background: #16141461;
   padding: 0.375rem;
   border-radius: 0.75rem;
   display: flex;
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
   background-color: transparent;
   transition: 0.2s;
-  box-shadow: var(--shadow-default);
+  // box-shadow: var(--shadow-default);
   &:hover {
     background-color: #a10707b9;
   }

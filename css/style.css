@@ -8,7 +8,7 @@
 :root {
   --card-height: 35vh;
   --card-width: calc(var(--card-height) / 1.5);
-  --shadow-default: 6px 15px 19px -3px rgba(0, 0, 0, 0.3);
+  --shadow-default: 6px 15px 19px -3px rgba(0,0,0, 0.3);
 }
 
 body {
@@ -65,7 +65,7 @@ body {
   min-width: 290px;
   margin: 2.5rem auto;
   background: linear-gradient(90deg, #dd9609 0%, #ff04049f 100%);
-  background: #1a1c22;
+  background: #16141461;
   padding: 0.375rem;
   border-radius: 0.75rem;
   display: flex;
@@ -85,7 +85,6 @@ body {
   cursor: pointer;
   background-color: transparent;
   transition: 0.2s;
-  box-shadow: var(--shadow-default);
 }
 .filters__button:hover {
   background-color: #a10707b9;
@@ -139,12 +138,7 @@ body {
   width: 104%;
   height: 102%;
   border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate),
-    #f8aa0e,
-    #feed52 43%,
-    #790000
-  );
+  background-image: linear-gradient(var(--rotate), #f8aa0e, #feed52 43%, #790000);
   position: absolute;
   z-index: -1;
   top: -1%;
@@ -163,12 +157,7 @@ body {
   margin: 0 auto;
   transform: scale(0.8);
   filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate),
-    #f8aa0e,
-    #feed52 40%,
-    #790000
-  );
+  background-image: linear-gradient(var(--rotate), #f8aa0e, #feed52 40%, #790000);
   opacity: 0;
   transition: opacity 0.5s;
   animation: spin 2.5s linear infinite;
@@ -378,7 +367,6 @@ body {
     transform: scale(0);
   }
 }
-
 /* <--------- MEDIA QUERIES MODAL ---------> */
 @media (max-width: 768px) {
   .modal__container {
