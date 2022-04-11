@@ -1,4 +1,7 @@
 import { filters } from './filters.js'
+import { loadingData } from './loading.js'
+import { createHumansCards } from './create-cards.js'
+import { revealImages } from './reveals-images.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init();
@@ -19,7 +22,7 @@ const fetchData = async () => {
     const data = await res.json();
     console.log("content");
 
-    getData(data)
+    createHumansCards(data)
   }
   catch (error) {
     console.log(error);
@@ -28,38 +31,3 @@ const fetchData = async () => {
     loadingData(false);
   }
 };
-
-
-const getData = async (info) => {
-  const data = info
-  const humans = document.getElementById('humans')
-  const cardHumanTemplate = document.getElementById('template-human').content
-  const fragment = document.createDocumentFragment()
-
-  data.forEach((character) => {
-    const clone = cardHumanTemplate.cloneNode(true)
-    clone.querySelector('img').src = character.picture_url
-    // console.log(character);
-
-    fragment.appendChild(clone)
-  })
-
-  humans.appendChild(fragment)
-}
-
-const revealImages = async () => {
-  setTimeout(() => {
-    const image = document.querySelectorAll('.char-img')
-    image.forEach((img) => {
-      img.style.opacity = '1'
-    })
-  }, 10000);
-}
-
-const loadingData = (bool) => {
-  if (bool) {
-    console.log("Loading...");
-  } else {
-    console.log("Fin del loading");
-  }
-}
