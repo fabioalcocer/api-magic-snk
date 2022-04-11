@@ -38,9 +38,11 @@
         data-content
         id="humans"
       >
-        <div class="card">
-          <img class="char-img" src="./assets/character.png" />
-        </div>
+        <a href="#modal">
+          <div class="card">
+            <img class="char-img" src="./assets/character.png" />
+          </div>
+        </a>
         <div class="card">
           <img class="char-img" src="./assets/character.png" />
         </div>
@@ -108,6 +110,26 @@
         <p>&#169; 2022 Fabio Alcocer All rights reserved.</p>
       </footer>
     </main>
+
+    <!--=============== MODAL ===============-->
+    <section id="modal" class="modal">
+      <div class="modal__container">
+        <figure class="modal__picture">
+          <img src="./assets/character.png" class="modal__img">
+        </figure>
+        <div class="modal__body">
+          <h2 class="modal__title">Eren Jeager</h2>
+          <p class="modal__paragraph">Male</p>
+          <p class="modal__description">The Attack Titan is exceptionally excellent in combat, but what makes its special is its constant longing for freedom and ability to see the future.</p>
+          <a href="./videos/video.html" class="modal__video">See best moment!
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+          <a href="#header" class="modal__close">Close</a>
+        </div>
+      </div>
+    </section>
+
     <script src="./js/index.js"></script>
+    <script src="https://kit.fontawesome.com/17a53f75f7.js" crossorigin="anonymous"></script>
   </body>
 </html>

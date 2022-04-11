@@ -1,7 +1,7 @@
-@import "./keyframes";
 @import "./reset";
 
-$bg-primary: #212534;
+$bg-primary: #1a1c22;
+$bg-card: #191c29;
 $title: #dd9609;
 $blood: #790000;
 :root {
@@ -25,7 +25,7 @@ body {
   padding-bottom: 30px;
 }
 
-// <--------- HEADER --------->
+/* <--------- HEADER ---------> */
 
 .main__header {
   position: relative;
@@ -37,7 +37,7 @@ body {
   text-align: center;
   flex-wrap: wrap;
   padding: 0.5rem 1.4rem .5rem 1rem;
-  box-shadow: 0px 17px 22px -15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 16px 22px -15px rgba(0, 0, 0, 0.1);
 }
 
 .header__toggle-mode {
@@ -48,8 +48,8 @@ body {
 .header__logo {
   width: 10vw;
   max-width: 130px;
-  min-width: 95px;
-  height: 6vh;
+  min-width: 120px;
+  height: 5.5vh;
 }
 
 .header__title {
@@ -59,23 +59,70 @@ body {
   text-shadow: 0 0 10px #000000;
 }
 
-// <--------- CARDS SECTION --------->
+/* <--------- FILTERS ---------> */
+
+.filters__content {
+  width: 36%;
+  min-width: 290px;
+  margin: 2.5rem auto;
+  background: linear-gradient(90deg, $title 0%, #ff04049f 100%);
+  background: $bg-primary;
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+.filters__button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.2s;
+  box-shadow: var(--shadow-default);
+  &:hover {
+    background-color: #a10707b9;
+  }
+}
+
+/* Hide and show projects & skills */
+.container__cards[data-content] {
+  display: none;
+}
+
+.filters__active[data-content] {
+  display: grid;
+}
+
+/* Activate button filter */
+.filter-tab-active {
+  background-color: $blood;
+}
+
+
+/* <--------- CARDS SECTION ---------> */
 
 .container__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   place-items: center;
   gap: 5rem;
-  padding-top: .6rem;
+  padding-top: .5rem;
 }
 
 .card {
-  background: #191c29;
+  background: $bg-card;
   width: var(--card-width);
   max-width: 200px;
   height: var(--card-height);
   max-height: 300px;
-  // padding: 3px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -143,7 +190,7 @@ body {
   }
 }
 
-// <--------- FOOTER --------->
+/* <--------- FOOTER ---------> */
 
 .main__footer {
   width: 100%;
@@ -163,7 +210,7 @@ body {
   transition: .7s;
 }
 
-// <--------- SCROLL --------->
+/* <--------- SCROLL ---------> */
 
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -180,48 +227,5 @@ body {
   background-color: hsl(207, 8%, 44%);
 }
 
-// <--------- FILTERS --------->
-.filters__content {
-  width: 35%;
-  min-width: 290px;
-  margin: 2.7rem auto;
-  background: linear-gradient(90deg, $title 0%, #ff04049f 100%);
-  padding: 0.375rem;
-  border-radius: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  column-gap: 0.5rem;
-}
-
-.filters__button {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 1rem;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  border-radius: 0.75rem;
-  cursor: pointer;
-  background-color: transparent;
-  transition: 0.3s;
-  box-shadow: var(--shadow-default);
-}
-
-.filters__button:hover {
-  background-color: $blood;
-}
-
-/* Hide and show projects & skills */
-.container__cards[data-content] {
-  display: none;
-}
-
-.filters__active[data-content] {
-  display: grid;
-}
-
-/* Activate button filter */
-.filter-tab-active {
-  background-color: $blood;
-}
+@import "./keyframes";
+@import "./modal"
