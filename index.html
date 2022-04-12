@@ -39,42 +39,20 @@
         data-content
         id="humans"
         data-aos="fade-down"
-        data-aos-delay="500"
+        data-aos-delay="400"
         data-aos-duration="1000"
-      >
-
-      </section>
+      ></section>
 
       <!--=============== TITANS ===============-->
-      <section class="container__cards" data-content id="titans">
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-      </section>
+      <section
+        class="container__cards"
+        data-content
+        id="titans"
+        data-aos="fade-down"
+        data-aos-delay="400"
+        data-aos-duration="1000"
+      ></section>
+
 
       <footer class="main__footer">
         <p>&#169; 2022 Fabio Alcocer All rights reserved.</p>
@@ -104,16 +82,24 @@
       </div>
     </section>
 
-
-  <!--=============== TEMPLATES ===============-->
+    <!--=============== TEMPLATES ===============-->
     <template id="template-human">
-      <a id="cartita" href="#modal">
+      <a id="card-human" href="#modal">
         <div class="card">
           <img class="char-img" src="./assets/character.png" />
         </div>
       </a>
     </template>
 
+    <template id="template-titan">
+      <a id="card-titan" href="#modal">
+        <div class="card" id="card-titan">
+          <img class="char-img" src="./assets/titan.jpg" />
+        </div>
+      </a>
+    </template>
+
+    <!--=============== SCRIPTS ===============-->
     <script defer src="./js/index.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script

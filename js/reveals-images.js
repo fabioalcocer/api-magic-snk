@@ -4,5 +4,5 @@ export const revealImages = async () => {
     image.forEach((img) => {
       img.style.opacity = '1'
     })
-  }, 10000);
+  }, 20000);
 }
