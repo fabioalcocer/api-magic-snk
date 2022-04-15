@@ -49,6 +49,7 @@ body {
   width: 10vw;
   max-width: 130px;
   min-width: 120px;
+  min-height: 45px;
   height: 5.5vh;
 }
 
@@ -116,8 +117,10 @@ body {
 .card {
   background: #191c29;
   width: var(--card-width);
+  min-width: 180px;
   max-width: 200px;
   height: var(--card-height);
+  min-height: 280px;
   max-height: 300px;
   position: relative;
   display: flex;
@@ -225,30 +228,7 @@ body {
   }
 }
 /* <--------- MODAL STYLES ---------> */
-.modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #212534;
-  display: none;
-  --pointer: none;
-  pointer-events: var(--pointer);
-  transition: opacity 0.5s;
-}
-.modal:target {
-  display: flex;
-  --pointer: unset;
-}
-.modal:target .modal__container {
-  animation: show 0.5s 0.2s backwards;
-}
-.modal:target .modal__picture {
-  animation: scale 0.6s 0.4s backwards;
-}
-
-.modal__container {
+dialog {
   width: 100%;
   max-width: 700px;
   max-height: 320px;
@@ -257,10 +237,24 @@ body {
   border-radius: 1em;
   background-color: #191c29;
   overflow: hidden;
-  gap: 1rem;
+  border: none;
+}
+
+dialog::backdrop {
+  background-color: #212534;
+}
+
+.modal__container {
+  max-height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
+}
+
+.modal__picture {
+  margin: 0 auto;
+  max-width: 400px;
 }
 
 .modal__img {
@@ -279,12 +273,8 @@ body {
   flex-grow: 2;
   text-align: center;
   height: 100%;
-  padding: 1rem 0;
-}
-
-.modal__picture {
-  margin: 0 auto;
-  max-width: 400px;
+  padding: 1.2rem;
+  padding-bottom: 1.7rem;
 }
 
 .modal__title {
@@ -296,13 +286,14 @@ body {
 
 .modal__paragraph {
   font-size: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 }
 
 .modal__description {
   max-width: 429px;
-  padding: 1.2rem 2rem;
+  padding: 1rem;
+  font-size: 1.1em;
   color: #dcdcdc;
 }
 
@@ -324,12 +315,15 @@ body {
   align-items: center;
   margin-bottom: 1rem;
   transition: 0.5s;
+  outline: none;
 }
+
 .modal__video:hover {
   background-color: transparent;
-  outline: 2px solid #790000;
-  transition: background-color 0.5s;
+  outline: 1px solid #790000;
+  transition: 0.5s;
 }
+
 .modal__video i {
   margin-left: 10px;
 }
@@ -345,28 +339,47 @@ body {
   font-weight: 700;
   text-shadow: 0 0 10px #000000;
   transition: 0.5s;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
 }
+
 .modal__close:hover {
   color: #dd9609;
   transition: 0.5s;
 }
 
-/* <--------- KEYFRAMES MODAL ---------> */
-@keyframes show {
-  0% {
-    transform: translateY(-150vh);
-  }
+/* From uiverse.io by @adamgiebl */
+.cta {
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  cursor: pointer;
 }
-@keyframes scale {
-  0% {
-    transform: scale(0);
-  }
+
+.cta:hover {
+  border: 1px solid white;
 }
+
+.cta:active {
+  box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
+}
+
 /* <--------- MEDIA QUERIES MODAL ---------> */
 @media (max-width: 768px) {
-  .modal__container {
+  dialog {
     width: 90%;
     max-width: 370px;
+    max-height: max-content;
+  }
+
+  .modal__container {
     max-height: max-content;
     flex-direction: column;
   }
@@ -380,17 +393,13 @@ body {
 
   .modal__img {
     min-width: 100%;
-    height: 300px;
-  }
-
-  .modal__body {
-    padding-bottom: 2rem;
+    height: 310px;
   }
 
   .modal__description {
     max-width: 429px;
-    padding: 1.2rem;
-    font-size: 15px;
+    padding: 1rem;
+    font-size: 1em;
   }
 
   .modal__video {

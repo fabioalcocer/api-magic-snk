@@ -60,10 +60,10 @@
     </main>
 
     <!--=============== MODAL ===============-->
-    <section id="modal" class="modal">
+    <dialog class="modal">
       <div class="modal__container">
         <figure class="modal__picture">
-          <img src="./assets/character.png" class="modal__img" />
+          <img src="./assets/character.png" class="modal__img">
         </figure>
         <div class="modal__body">
           <h2 class="modal__title">Eren Jeager</h2>
@@ -71,32 +71,28 @@
           <p class="modal__description">
             The Attack Titan is exceptionally excellent in combat, but what
             makes its special is its constant longing for freedom and ability to
-            see the future.
+            see the future."
           </p>
-          <a href="./videos/video.html" class="modal__video"
+          <a href="./video_page/video.html" class="modal__video"
             >See best moment!
             <i class="fas fa-external-link-alt"></i>
           </a>
-          <a href="#" class="modal__close">Close</a>
+          <button class="modal__close" id="cancel">Close</button>
         </div>
       </div>
-    </section>
+    </dialog>
 
     <!--=============== TEMPLATES ===============-->
     <template id="template-human">
-      <a id="card-human" href="#modal">
-        <div class="card">
-          <img class="char-img" src="./assets/character.png" />
-        </div>
-      </a>
+      <div class="card" id="card-human">
+        <img class="char-img" src="./assets/character.png" />
+      </div>
     </template>
 
     <template id="template-titan">
-      <a id="card-titan" href="#modal">
-        <div class="card" id="card-titan">
-          <img class="char-img" src="./assets/titan.jpg" />
-        </div>
-      </a>
+      <div class="card" id="card-titan">
+        <img class="char-img" src="./assets/titan.jpg" />
+      </div>
     </template>
 
     <!--=============== SCRIPTS ===============-->

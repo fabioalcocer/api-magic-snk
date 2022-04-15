@@ -7,6 +7,7 @@ export const createTitansCards = async (dataTitans) => {
   data.forEach((titan) => {
     const clone = cardTitanTemplate.cloneNode(true)
     clone.querySelector('img').src = titan.picture_url
+    clone.querySelector('img').dataset.name = titan.name
 
     fragment.appendChild(clone)
   })

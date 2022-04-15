@@ -49,6 +49,7 @@ body {
   width: 10vw;
   max-width: 130px;
   min-width: 120px;
+  min-height: 45px;
   height: 5.5vh;
 }
 
@@ -120,8 +121,10 @@ body {
 .card {
   background: $bg-card;
   width: var(--card-width);
+  min-width: 180px;
   max-width: 200px;
   height: var(--card-height);
+  min-height: 280px;
   max-height: 300px;
   position: relative;
   display: flex;

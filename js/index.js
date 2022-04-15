@@ -12,6 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
   revealImages()
 })
 
+document.addEventListener('click', (e) => {
+  const dialog = document.querySelector("dialog");
+  if (e.target.dataset.name) {
+    console.log(e.target.matches('.char-img'));
+    console.log(e.target.dataset.name);
+    dialog.showModal()
+  }
+
+  const cancel = document.querySelector("#cancel");
+  cancel.addEventListener("click", () => dialog.close());
+})
+
 
 /*=============== FETCH DATA ===============*/
 const urlHumans = "http://attackontitanapi.herokuapp.com/api/characters"
@@ -52,3 +64,5 @@ const fetchDataTitans = async () => {
 
 
 //TODO Añadir Loading, ver si podemos cambiar el src del video con JS y ver lo de los modales
+
+
