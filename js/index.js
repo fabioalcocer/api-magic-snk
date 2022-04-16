@@ -3,6 +3,7 @@ import { loadingData } from './loading.js'
 import { createHumansCards } from './cards-humans.js'
 import { createTitansCards } from './cards-titans.js'
 import { revealImages } from './reveals-images.js'
+import { createModal } from './modals.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init()
@@ -10,18 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchDataHumans()
   fetchDataTitans()
   revealImages()
-})
-
-document.addEventListener('click', (e) => {
-  const dialog = document.querySelector("dialog");
-  if (e.target.dataset.name) {
-    console.log(e.target.matches('.char-img'));
-    console.log(e.target.dataset.name);
-    dialog.showModal()
-  }
-
-  const cancel = document.querySelector("#cancel");
-  cancel.addEventListener("click", () => dialog.close());
 })
 
 
@@ -37,6 +26,7 @@ const fetchDataHumans = async () => {
     console.log("content");
 
     createHumansCards(data)
+    createModal(data)
   }
   catch (error) {
     console.log(error);
