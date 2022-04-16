@@ -63,8 +63,9 @@ body {
 /* <--------- FILTERS ---------> */
 
 .filters__content {
-  width: 36%;
-  min-width: 290px;
+  width: 35%;
+  min-width: 260px;
+  max-width: 380px;
   margin: 2.5rem auto;
   background: linear-gradient(90deg, $title 0%, #ff04049f 100%);
   background: #16141461;
@@ -73,6 +74,7 @@ body {
   display: flex;
   justify-content: space-between;
   column-gap: 1rem;
+  box-shadow: var(--shadow-default);
 }
 
 .filters__button {

@@ -31,16 +31,17 @@ body {
 }
 
 .modal__video {
-  width: 60%;
-  max-width: 250px;
+  width: 50%;
+  min-width: 215px;
+  max-width: 220px;
   display: inline-block;
-  padding: 1.5em 1em;
+  padding: 1.2em 1em;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
   background-color: #790000;
   color: #fff;
-  border-radius: 0.7em;
+  border-radius: 1em;
   text-align: center;
   margin: 0 auto;
   display: flex;
