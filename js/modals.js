@@ -12,7 +12,6 @@ document.addEventListener('click', (e) => {
   if (e.target.dataset.name) {
     dialog.showModal()
     // console.log(e.target.matches('.char-img'));
-    // console.log(e.target.dataset.name);
 
     const humanFiltered = dataHumans.filter((character) => {
       return character.name === e.target.dataset.name
@@ -26,7 +25,6 @@ document.addEventListener('click', (e) => {
 
   if (e.target.dataset.nameTitan) {
     dialog.showModal()
-    // console.log(e.target.dataset.nameTitan);
 
     const titanFiltered = dataTitans.filter((titan) => {
       return titan.name === e.target.dataset.nameTitan
@@ -39,8 +37,6 @@ document.addEventListener('click', (e) => {
     modal.querySelector('.modal__description').textContent = titan.description
   }
 })
-
-
 
 
 export const createModalHumans = async (dataModal) => {
