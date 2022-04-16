@@ -89,13 +89,11 @@ body {
   cursor: pointer;
   background-color: transparent;
   transition: 0.2s;
-  // box-shadow: var(--shadow-default);
   &:hover {
     background-color: #a10707b9;
   }
 }
 
-/* Hide and show projects & skills */
 .container__cards[data-content] {
   display: none;
 }
@@ -171,13 +169,12 @@ body {
     width: 100%;
     margin: 0 auto;
     transform: scale(.9) translateY(-30px);;
-    // transform: translateY(-50px);
     filter: blur(calc(var(--card-height) / 8));
     background-image: linear-gradient(
       var(--rotate),
       #f8aa0e,
-      #d5a60d 40%,
-      #790000
+      #fde300,
+      #c20606,
     );
     opacity: 0;
     transition: opacity 0.5s;

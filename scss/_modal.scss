@@ -13,7 +13,8 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: #212534;
+  background-color: #0a0a0c98;
+  backdrop-filter: blur(10px);
 }
 
 .modal__container {
@@ -122,7 +123,7 @@ dialog::backdrop {
 
 .modal__close:hover {
   color: #dd9609;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .cta {

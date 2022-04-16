@@ -93,7 +93,6 @@ body {
   background-color: #a10707b9;
 }
 
-/* Hide and show projects & skills */
 .container__cards[data-content] {
   display: none;
 }
@@ -162,7 +161,7 @@ body {
   margin: 0 auto;
   transform: scale(0.9) translateY(-30px);
   filter: blur(calc(var(--card-height) / 8));
-  background-image: linear-gradient(var(--rotate), #f8aa0e, #d5a60d 40%, #790000);
+  background-image: linear-gradient(var(--rotate), #f8aa0e, #fde300, #c20606);
   opacity: 0;
   transition: opacity 0.5s;
   animation: spin 2s linear infinite;
@@ -243,7 +242,8 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: #212534;
+  background-color: #0a0a0c98;
+  backdrop-filter: blur(10px);
 }
 
 .modal__container {
@@ -352,7 +352,7 @@ dialog::backdrop {
 
 .modal__close:hover {
   color: #dd9609;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .cta {

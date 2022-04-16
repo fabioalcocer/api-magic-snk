@@ -1,5 +1,10 @@
 document.addEventListener('click', (e) => {
-  const dialog = document.querySelector("dialog");
+  const dialog = document.querySelector(".modal");
+
+  dialog.addEventListener('click', () => {
+    dialog.close()
+  })
+
   if (e.target.dataset.name) {
     console.log(e.target.matches('.char-img'));
     console.log(e.target.dataset.name);
@@ -11,16 +16,22 @@ document.addEventListener('click', (e) => {
 })
 
 
-
 export const createModal = async (dataModal) => {
   const data = dataModal
   const modal = document.querySelector('.modal')
-  // const body = document.querySelector('body')
-  // const fragment = document.createDocumentFragment()
 
-  modal.querySelector('.modal__img').src = data[3].picture_url
-  modal.querySelector('.modal__title').textContent = data[3].name
-  modal.querySelector('.modal__paragraph').textContent = data[3].gender
-
-  console.log(data[0]);
+  modal.querySelector('.modal__img').src = data[0].picture_url
+  modal.querySelector('.modal__title').textContent = data[0].name
+  modal.querySelector('.modal__paragraph').textContent = data[0].gender
 }
+
+export const createModalTitan = async (dataModal) => {
+  const data = dataModal
+  const modal = document.querySelector('.modal')
+
+  // modal.querySelector('.modal__img').src = data[3].picture_url
+  // modal.querySelector('.modal__title').textContent = data[3].name
+  // modal.querySelector('.modal__paragraph').textContent = data[3].gender
+}
+
+
