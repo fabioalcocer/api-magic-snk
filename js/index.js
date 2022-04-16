@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /*=============== FETCH DATA ===============*/
-const urlHumans = "http://attackontitanapi.herokuapp.com/api/characters"
-const urlTitans = "http://attackontitanapi.herokuapp.com/api/titans"
+const urlHumans = "https://attackontitanapi.herokuapp.com/api/characters"
+const urlTitans = "https://attackontitanapi.herokuapp.com/api/titans"
 
 const fetchDataHumans = async () => {
   try {
