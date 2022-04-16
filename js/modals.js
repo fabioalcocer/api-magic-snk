@@ -1,37 +1,62 @@
+let dataHumans = []
+let dataTitans = []
+
 document.addEventListener('click', (e) => {
   const dialog = document.querySelector(".modal");
+  const modal = document.querySelector('.modal')
+  const cancel = document.querySelector("#cancel");
 
-  dialog.addEventListener('click', () => {
-    dialog.close()
-  })
+  dialog.addEventListener('click', () => dialog.close())
+  cancel.addEventListener("click", () => dialog.close());
 
   if (e.target.dataset.name) {
-    console.log(e.target.matches('.char-img'));
-    console.log(e.target.dataset.name);
     dialog.showModal()
+    // console.log(e.target.matches('.char-img'));
+    // console.log(e.target.dataset.name);
+
+    const humanFiltered = dataHumans.filter((character) => {
+      return character.name === e.target.dataset.name
+    })
+
+    const character = humanFiltered[0]
+    modal.querySelector('.modal__img').src = character.picture_url
+    modal.querySelector('.modal__title').textContent = character.name
+    modal.querySelector('.modal__paragraph').textContent = character.gender
   }
 
-  const cancel = document.querySelector("#cancel");
-  cancel.addEventListener("click", () => dialog.close());
+  if (e.target.dataset.nameTitan) {
+    dialog.showModal()
+    // console.log(e.target.dataset.nameTitan);
+
+    const titanFiltered = dataTitans.filter((titan) => {
+      return titan.name === e.target.dataset.nameTitan
+    })
+
+    const titan = titanFiltered[0]
+    modal.querySelector('.modal__img').src = titan.picture_url
+    modal.querySelector('.modal__title').textContent = titan.name
+    modal.querySelector('.modal__paragraph').textContent = titan.height_m + "M"
+    modal.querySelector('.modal__description').textContent = titan.description
+  }
 })
 
 
-export const createModal = async (dataModal) => {
-  const data = dataModal
-  const modal = document.querySelector('.modal')
 
-  modal.querySelector('.modal__img').src = data[0].picture_url
-  modal.querySelector('.modal__title').textContent = data[0].name
-  modal.querySelector('.modal__paragraph').textContent = data[0].gender
+
+export const createModalHumans = async (dataModal) => {
+  const data = dataModal
+  getDataHumans(data)
 }
 
-export const createModalTitan = async (dataModal) => {
-  const data = dataModal
-  const modal = document.querySelector('.modal')
-
-  // modal.querySelector('.modal__img').src = data[3].picture_url
-  // modal.querySelector('.modal__title').textContent = data[3].name
-  // modal.querySelector('.modal__paragraph').textContent = data[3].gender
+const getDataHumans = async (datos) => {
+  dataHumans = datos
 }
 
+export const createModalTitans = async (dataModal) => {
+  const data = dataModal
+  getDataTitans(data)
+}
 
+const getDataTitans = async (datos) => {
+  dataTitans = datos
+}

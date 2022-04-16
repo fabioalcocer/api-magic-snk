@@ -3,7 +3,7 @@ import { loadingData } from './loading.js'
 import { createHumansCards } from './cards-humans.js'
 import { createTitansCards } from './cards-titans.js'
 import { revealImages } from './reveals-images.js'
-import { createModal, createModalTitan } from './modals.js'
+import { createModalHumans, createModalTitans } from './modals.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init()
@@ -26,7 +26,7 @@ const fetchDataHumans = async () => {
     console.log("content");
 
     createHumansCards(data)
-    createModal(data)
+    createModalHumans(data)
   }
   catch (error) {
     console.log(error);
@@ -44,7 +44,7 @@ const fetchDataTitans = async () => {
     const data = await res.json();
 
     createTitansCards(data)
-    createModalTitan(data)
+    createModalTitans(data)
   }
   catch (error) {
     console.log(error);
