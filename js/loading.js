@@ -1,7 +1,8 @@
+const loading = document.querySelector('.pl')
 export const loadingData = (bool) => {
   if (bool) {
-    console.log("Loading...");
+    loading.classList.remove('d-none')
   } else {
-    console.log("Fin del loading");
+    loading.classList.add('d-none')
   }
 }
