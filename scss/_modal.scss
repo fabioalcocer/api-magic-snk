@@ -14,7 +14,7 @@ dialog {
 
 dialog::backdrop {
   background-color: #0a0a0ca5;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(25px);
 }
 
 .modal__container {
@@ -88,16 +88,16 @@ dialog::backdrop {
   text-align: center;
   text-decoration: none;
   border-radius: 0.7em;
-  transition: 0.5s;
   background-color: #790000;
   color: #fff;
   outline: none;
+  transition: 0.4s;
 }
 
 .modal__video:hover {
-  background-color: transparent;
-  outline: 1px solid #790000;
-  transition: 0.5s;
+  filter: brightness(1.3);
+  transform: scale(1.05);
+  transition: 0.4s;
 }
 
 .modal__video i {
@@ -123,7 +123,7 @@ dialog::backdrop {
 
 .modal__close:hover {
   color: #dd9609;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .cta {
