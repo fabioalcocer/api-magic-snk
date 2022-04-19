@@ -52,4 +52,4 @@ Some of the new things I learned in this project were validating forms using reg
 
 ## Author
 
-- GitHub - [@alcocerSejas](https://github.com/fabioAlcocer/)
+- GitHub - [@alcocerSejas](https://github.com/fabioalcocer/)
