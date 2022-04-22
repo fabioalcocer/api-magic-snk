@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-- [Overview](#overview)
+- [Preview](#preview)
   - [The challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
@@ -16,20 +16,20 @@
 
 ### Screenshot
 
-![](./assets/preview.jpg)
+![](./assets/preview.png)
 
 ## The challenge
 
 In this project you will see the the best moments of each SNK character, making use of its API:
 
-- View the 
+- View the
 - 
 - **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Links
-
-- Solution URL: [Solution]()
-- Live Site URL: [Live]()
+- API: [API](https://attackontitanapi.herokuapp.com/)
+- Solution URL: [Solution](https://github.com/fabioalcocer/api-magic-snk)
+- Live Site URL: [Live](https://fabioalcocer.github.io/api-magic-snk/)
 
 ## My process
 
@@ -38,18 +38,24 @@ In this project you will see the the best moments of each SNK character, making 
 - HTML5 markup
 - Mobile-first workflow
 - Responsive Design
-- Regular Expressions
-- ES6 JS
+- Grid Layout
+- SASS Modules
+- Vanilla Javascript
+- Fetch
+- AOS Library
 
 ### What I learned
 
-Some of the new things I learned in this project were validating forms using regular expressions, as well as adapting the design to any screen size.
+In this project I learned how to handle asynchronous requests, data manipulation through an API, the correct use of async and await. How to implement animation libraries like AOS, creating loadings only with CSS. And the correct structuring of modules in SASS.
 
 ### Useful resources
 
-- [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/CSS/::placeholder)
-- 
+- [AOS Library](https://michalsnik.github.io/aos/)
+- [Property](https://developer.mozilla.org/en-US/docs/Web/CSS/@property)
+- [MDN Web Docs](https://developer.mozilla.org/es/docs/Web)
 
 ## Author
-
-- GitHub - [@alcocerSejas](https://github.com/fabioalcocer/)
+### Fabio Alcocer Sejas
+- Twitter - [@alcocerSejas](https://twitter.com/AlcocerSejas)
+- LinkedIn - [@fabioalcocer](https://www.linkedin.com/in/fabio-alcocer/)
+- GitHub - [@fabioalcocer](https://github.com/fabioalcocer/)
