@@ -242,9 +242,19 @@ dialog {
   border: none;
 }
 
+dialog[open] {
+  width: max-content;
+  height: max-content;
+  animation: fade-in 0.7s forwards;
+}
+
+dialog[open]::backdrop {
+  animation: fade-in 0.7s forwards;
+  pointer-events: none;
+}
+
 dialog::backdrop {
-  background-color: #0a0a0ca5;
-  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.522);
 }
 
 .modal__container {
@@ -422,6 +432,22 @@ dialog::backdrop {
   .modal__video {
     width: 90%;
     font-size: 15px;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* <--------- LOADING ---------> */

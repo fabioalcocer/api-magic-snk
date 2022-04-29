@@ -23,7 +23,6 @@ const fetchDataHumans = async () => {
     loadingData(true);
     const res = await fetch(urlHumans);
     const data = await res.json();
-    console.log("content");
 
     createHumansCards(data)
     createModalHumans(data)

@@ -6,8 +6,16 @@ document.addEventListener('click', (e) => {
   const modal = document.querySelector('.modal')
   const cancel = document.querySelector("#cancel");
 
-  dialog.addEventListener('click', () => dialog.close())
-  cancel.addEventListener("click", () => dialog.close());
+  cancel.addEventListener("click", () => {
+    dialog.close();
+    enableScroll()
+  })
+
+  if (!dialog.contains(e.target)) {
+    dialog.close()
+    enableScroll()
+  }
+
 
   if (e.target.dataset.name) {
     dialog.showModal()
@@ -17,10 +25,11 @@ document.addEventListener('click', (e) => {
       return character.name === e.target.dataset.name
     })
 
-    const character = humanFiltered[0]
-    modal.querySelector('.modal__img').src = character.picture_url
-    modal.querySelector('.modal__title').textContent = character.name
-    modal.querySelector('.modal__paragraph').textContent = character.gender
+    const human = humanFiltered[0]
+    modal.querySelector('.modal__img').src = human.picture_url
+    modal.querySelector('.modal__title').textContent = human.name
+    modal.querySelector('.modal__paragraph').textContent = human.gender
+    disableScroll()
   }
 
   if (e.target.dataset.nameTitan) {
@@ -45,7 +54,7 @@ export const createModalHumans = async (dataModal) => {
 }
 
 const getDataHumans = async (datos) => {
-  dataHumans = datos
+  dataHumans.push(...datos)
 }
 
 export const createModalTitans = async (dataModal) => {
@@ -54,5 +63,16 @@ export const createModalTitans = async (dataModal) => {
 }
 
 const getDataTitans = async (datos) => {
-  dataTitans = datos
+  dataTitans.push(...datos)
+}
+
+
+const disableScroll = () => {
+  var x = window.scrollX;
+  var y = window.scrollY;
+  window.onscroll = function () { window.scrollTo(x, y) };
+}
+
+const enableScroll = () => {
+  window.onscroll = null;
 }
