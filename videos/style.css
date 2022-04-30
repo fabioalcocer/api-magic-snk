@@ -48,12 +48,12 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
+  transition: background-color 0.5s;
 }
 
 .modal__video i {
   font-size: 1.5rem;
   margin-left: 1rem;
-  transition: background-color 0.5s;
 }
 
 .modal__video:hover {
