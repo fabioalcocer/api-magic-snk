@@ -26,6 +26,11 @@ body {
   padding-bottom: 30px;
 }
 
+@media (max-width: 768px) {
+  .char-img {
+    opacity: 1;
+  }
+}
 /* <--------- HEADER ---------> */
 .main__header {
   position: relative;
@@ -210,11 +215,6 @@ body {
   background-color: #677179;
 }
 
-@media (max-width: 768px) {
-  .char-img {
-    opacity: 1;
-  }
-}
 /* <--------- ANIMATION LIGHTS CARDS---------> */
 @property --rotate {
   syntax: "<angle>";

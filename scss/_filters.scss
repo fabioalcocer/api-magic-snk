@@ -1,0 +1,46 @@
+/* <--------- FILTERS ---------> */
+
+.filters__content {
+  width: 35%;
+  min-width: 260px;
+  max-width: 380px;
+  margin: 2.5rem auto;
+  background: linear-gradient(90deg, $title 0%, #ff04049f 100%);
+  background: #16141461;
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 1rem;
+  box-shadow: var(--shadow-default);
+}
+
+.filters__button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.2s;
+  &:hover {
+    background-color: #a10707b9;
+  }
+}
+
+.container__cards[data-content] {
+  display: none;
+}
+
+.filters__active[data-content] {
+  display: grid;
+}
+
+/* Activate button filter */
+.filter-tab-active {
+  background-color: $blood;
+}

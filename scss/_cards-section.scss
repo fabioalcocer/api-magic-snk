@@ -1,0 +1,93 @@
+/* <--------- CARDS SECTION ---------> */
+
+.container__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  place-items: center;
+  gap: 5rem;
+  padding-top: .5rem;
+}
+
+.card {
+  background: $bg-card;
+  width: var(--card-width);
+  min-width: 180px;
+  max-width: 200px;
+  height: var(--card-height);
+  min-height: 280px;
+  max-height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  background-image: url(../assets/sc-logo.webp);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  box-shadow: var(--shadow-default);
+
+  &::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #f8aa0e,
+      #feed52 43%,
+      #790000
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 3.5s linear infinite;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(.9) translateY(-30px);;
+    filter: blur(calc(var(--card-height) / 8));
+    background-image: linear-gradient(
+      var(--rotate),
+      #f8aa0e,
+      #fde300,
+      #c20606,
+    );
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: spin 2s linear infinite;
+  }
+
+  &:hover {
+    .char-img {
+      transition: .7s;
+      opacity: 1;
+    }
+
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.char-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  opacity: 0;
+  transition: .7s;
+}
