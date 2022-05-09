@@ -1,10 +1,11 @@
 let dataHumans = []
 let dataTitans = []
+let characterID = ''
 
 document.addEventListener('click', (e) => {
   const dialog = document.querySelector(".modal");
   const modal = document.querySelector('.modal')
-  const cancel = document.querySelector("#cancel");
+  const cancel = document.querySelector(".modal__close");
 
   cancel.addEventListener("click", () => {
     dialog.close();
@@ -16,10 +17,9 @@ document.addEventListener('click', (e) => {
     enableScroll()
   }
 
-
   if (e.target.dataset.name) {
-    dialog.showModal()
-    // console.log(e.target.matches('.char-img'));
+    characterID = e.target.dataset.name
+    console.log(characterID);
 
     const humanFiltered = dataHumans.filter((character) => {
       return character.name === e.target.dataset.name
@@ -29,12 +29,12 @@ document.addEventListener('click', (e) => {
     modal.querySelector('.modal__img').src = human.picture_url
     modal.querySelector('.modal__title').textContent = human.name
     modal.querySelector('.modal__paragraph').textContent = human.gender
+
+    dialog.showModal()
     disableScroll()
   }
 
   if (e.target.dataset.nameTitan) {
-    dialog.showModal()
-
     const titanFiltered = dataTitans.filter((titan) => {
       return titan.name === e.target.dataset.nameTitan
     })
@@ -44,11 +44,14 @@ document.addEventListener('click', (e) => {
     modal.querySelector('.modal__title').textContent = titan.name
     modal.querySelector('.modal__paragraph').textContent = titan.height_m + "M"
     modal.querySelector('.modal__description').textContent = titan.description
+
+    dialog.showModal()
+    disableScroll()
   }
 })
 
 
-export const createModalHumans = async (dataModal) => {
+const createModalHumans = async (dataModal) => {
   const data = dataModal
   getDataHumans(data)
 }
@@ -57,7 +60,7 @@ const getDataHumans = async (datos) => {
   dataHumans.push(...datos)
 }
 
-export const createModalTitans = async (dataModal) => {
+const createModalTitans = async (dataModal) => {
   const data = dataModal
   getDataTitans(data)
 }
@@ -76,3 +79,5 @@ const disableScroll = () => {
 const enableScroll = () => {
   window.onscroll = null;
 }
+
+export { createModalHumans, createModalTitans }
