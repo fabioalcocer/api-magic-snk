@@ -24,7 +24,6 @@ document.addEventListener('click', (e) => {
 
   if (e.target.dataset.name) {
     characterID = e.target.dataset.name
-    changeSrc(characterID);
 
     const humanFiltered = dataHumans.filter((character) => {
       return character.name === e.target.dataset.name
@@ -37,6 +36,8 @@ document.addEventListener('click', (e) => {
 
     dialog.showModal()
     disableScroll()
+
+    changeSrc(characterID);
   }
 
   if (e.target.dataset.nameTitan) {
@@ -83,8 +84,6 @@ const getDataTitans = async (datos) => {
 }
 
 const changeSrc = (id) => {
-  console.log(sourcesVideos);
-
   const character = sourcesVideos.filter(char => char.id === id);
   video.poster = character[0].poster;
   video.src = character[0].src;
