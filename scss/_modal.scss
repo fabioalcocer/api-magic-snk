@@ -84,7 +84,7 @@ dialog::backdrop {
   color: #dcdcdc;
 }
 
-.modal__video {
+.modal__btn {
   width: 100%;
   max-width: 200px;
   display: inline-block;
@@ -105,13 +105,13 @@ dialog::backdrop {
   transition: 0.4s;
 }
 
-.modal__video:hover {
+.modal__btn:hover {
   filter: brightness(1.1);
   transform: scale(1.05);
   transition: 0.4s;
 }
 
-.modal__video i {
+.modal__btn i {
   margin-left: 10px;
 }
 
@@ -201,7 +201,7 @@ dialog::backdrop {
     font-size: 1em;
   }
 
-  .modal__video {
+  .modal__btn {
     width: 90%;
     font-size: 15px;
   }

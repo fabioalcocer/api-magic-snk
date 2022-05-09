@@ -1,4 +1,4 @@
-const loading = document.querySelector('.pl')
+const loading = document.querySelector('.spinner')
 export const loadingData = (bool) => {
   if (bool) {
     loading.classList.remove('d-none')

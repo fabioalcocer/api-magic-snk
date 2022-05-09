@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,16 +40,8 @@
       </ul>
 
       <!--=============== LOADING ===============-->
-    <svg class="pl d-none" width="128px" height="128px" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-      <circle class="pl__ring1" cx="64" cy="64" r="60" fill="none" stroke="hsl(3,90%,55%)" stroke-width="8" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="377 377" stroke-dashoffset="-376.4"></circle>
-      <circle class="pl__ring2" cx="64" cy="64" r="52.5" fill="none" stroke="hsl(13,90%,55%)" stroke-width="7" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="329.9 329.9" stroke-dashoffset="-329.3"></circle>
-      <circle class="pl__ring3" cx="64" cy="64" r="46" fill="none" stroke="hsl(23,90%,55%)" stroke-width="6" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="289 289" stroke-dashoffset="-288.6"></circle>
-      <circle class="pl__ring4" cx="64" cy="64" r="40.5" fill="none" stroke="hsl(33,90%,55%)" stroke-width="5" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="254.5 254.5" stroke-dashoffset="-254"></circle>
-      <circle class="pl__ring5" cx="64" cy="64" r="36" fill="none" stroke="hsl(43,90%,55%)" stroke-width="4" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="226.2 226.2" stroke-dashoffset="-225.8"></circle>
-      <circle class="pl__ring6" cx="64" cy="64" r="32.5" fill="none" stroke="hsl(53,90%,55%)" stroke-width="3" transform="rotate(-90,64,64)" stroke-linecap="round" stroke-dasharray="204.2 204.2" stroke-dashoffset="-203.9"></circle>
-    </svg>
-
-
+      <div class="spinner"></div>
+      
       <!--=============== HUMANS ===============-->
       <section
         class="container__cards filters__active"
@@ -65,17 +62,36 @@
         data-aos-duration="1000"
       ></section>
 
+      <!--=============== VIDEO PLAYER ===============-->
+      <div class="wrapper d-none">
+        <div class="player">
+          <video
+            id="video"
+            poster="https://res.cloudinary.com/auwnsull/image/upload/v1628763334/a2nrhpauac1fa1dumuit.jpg"
+            src="https://res.cloudinary.com/daobmfotr/video/upload/v1649649821/my%20videos/Warriors_Attack_on_Titan_AMV__1080p_Trim_ee7212.mp4"
+            loop="true"
+            controls="true"
+            muted
+          ></video>
+        </div>
+        <a href="../index.html" class="modal__video"
+          >Back to homepage
+          <i class="fas fa-arrow-circle-right"></i>
+        </a>
+      </div>
 
+      <!--=============== FOOTER ===============-->
       <footer class="main__footer">
         <p>&#169; 2022 Fabio Alcocer All rights reserved.</p>
       </footer>
+
     </main>
 
     <!--=============== MODAL ===============-->
     <dialog class="modal">
       <div class="modal__container">
         <figure class="modal__picture">
-          <img src="" class="modal__img">
+          <img src="" class="modal__img" />
         </figure>
         <div class="modal__body">
           <h2 class="modal__title">Eren Jeager</h2>
@@ -85,7 +101,7 @@
             makes its special is its constant longing for freedom and ability to
             see the future."
           </p>
-          <a href="./videos/video.html" class="modal__video" id="video-btn"
+          <a href="#video" class="modal__btn" id="video-btn"
             >See best moment!
             <i class="fas fa-external-link-alt"></i>
           </a>
@@ -106,7 +122,7 @@
         <img class="char-img" src="" />
       </div>
     </template>
-    
+
     <!--=============== SCRIPTS ===============-->
     <script defer src="./js/index.js" type="module"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -1,12 +1,17 @@
+import { sourcesVideos } from './videos.js'
+
+const dialog = document.querySelector(".modal");
+const modal = document.querySelector('.modal')
+const cancel = document.querySelector(".modal__close");
+const sectionCards = document.querySelector('.container__cards')
+const filterTabs = document.querySelector('.filters__content')
+const videoPlayer = document.querySelector('.wrapper')
+
 let dataHumans = []
 let dataTitans = []
 let characterID = ''
 
 document.addEventListener('click', (e) => {
-  const dialog = document.querySelector(".modal");
-  const modal = document.querySelector('.modal')
-  const cancel = document.querySelector(".modal__close");
-
   cancel.addEventListener("click", () => {
     dialog.close();
     enableScroll()
@@ -19,7 +24,7 @@ document.addEventListener('click', (e) => {
 
   if (e.target.dataset.name) {
     characterID = e.target.dataset.name
-    console.log(characterID);
+    changeSrc(characterID);
 
     const humanFiltered = dataHumans.filter((character) => {
       return character.name === e.target.dataset.name
@@ -48,6 +53,14 @@ document.addEventListener('click', (e) => {
     dialog.showModal()
     disableScroll()
   }
+
+  if (e.target.id === "video-btn") {
+    sectionCards.classList.add('d-none')
+    filterTabs.classList.add('d-none')
+    videoPlayer.classList.remove('d-none')
+    dialog.close()
+    enableScroll()
+  }
 })
 
 
@@ -67,6 +80,14 @@ const createModalTitans = async (dataModal) => {
 
 const getDataTitans = async (datos) => {
   dataTitans.push(...datos)
+}
+
+const changeSrc = (id) => {
+  console.log(sourcesVideos);
+
+  const character = sourcesVideos.filter(char => char.id === id);
+  video.poster = character[0].poster;
+  video.src = character[0].src;
 }
 
 

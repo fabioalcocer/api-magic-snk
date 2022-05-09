@@ -3,224 +3,39 @@
   display: none;
 }
 
-.pl {
-  width: 5em;
-  height: 5em;
+.spinner {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   margin: auto;
 }
 
-.pl circle {
-transform-box: fill-box;
-transform-origin: 50% 50%;
+.spinner::before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
 }
 
-.pl__ring1 {
-animation: ring1 4s 0s ease-in-out infinite;
+.spinner:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, #ff00cc 0%, #333399 100%);
+  animation: spin8932 .5s infinite linear;
 }
 
-.pl__ring2 {
-animation: ring2 4s 0.04s ease-in-out infinite;
+.spinner:after {
+  width: 85%;
+  height: 85%;
+  background-color: #212121;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.pl__ring3 {
-animation: ring3 4s 0.08s ease-in-out infinite;
-}
-
-.pl__ring4 {
-animation: ring4 4s 0.12s ease-in-out infinite;
-}
-
-.pl__ring5 {
-animation: ring5 4s 0.16s ease-in-out infinite;
-}
-
-.pl__ring6 {
-animation: ring6 4s 0.2s ease-in-out infinite;
-}
-
-/* Animations */
-@keyframes ring1 {
-from {
-  stroke-dashoffset: -376.237129776;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -94.247778;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -376.237129776;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -94.247778;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -376.237129776;
-  transform: rotate(4.75turn);
-}
-}
-
-@keyframes ring2 {
-from {
-  stroke-dashoffset: -329.207488554;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -82.46680575;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -329.207488554;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -82.46680575;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -329.207488554;
-  transform: rotate(4.75turn);
-}
-}
-
-@keyframes ring3 {
-from {
-  stroke-dashoffset: -288.4484661616;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -72.2566298;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -288.4484661616;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -72.2566298;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -288.4484661616;
-  transform: rotate(4.75turn);
-}
-}
-
-@keyframes ring4 {
-from {
-  stroke-dashoffset: -253.9600625988;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -63.61725015;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -253.9600625988;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -63.61725015;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -253.9600625988;
-  transform: rotate(4.75turn);
-}
-}
-
-@keyframes ring5 {
-from {
-  stroke-dashoffset: -225.7422778656;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -56.5486668;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -225.7422778656;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -56.5486668;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -225.7422778656;
-  transform: rotate(4.75turn);
-}
-}
-
-@keyframes ring6 {
-from {
-  stroke-dashoffset: -203.795111962;
-  transform: rotate(-0.25turn);
-  animation-timing-function: ease-in;
-}
-
-23% {
-  stroke-dashoffset: -51.05087975;
-  transform: rotate(1turn);
-  animation-timing-function: ease-out;
-}
-
-46%, 50% {
-  stroke-dashoffset: -203.795111962;
-  transform: rotate(2.25turn);
-  animation-timing-function: ease-in;
-}
-
-73% {
-  stroke-dashoffset: -51.05087975;
-  transform: rotate(3.5turn);
-  animation-timing-function: ease-out;
-}
-
-96%, to {
-  stroke-dashoffset: -203.795111962;
-  transform: rotate(4.75turn);
-}
+@keyframes spin8932 {
+  to {
+    transform: rotate(360deg);
+  }
 }
