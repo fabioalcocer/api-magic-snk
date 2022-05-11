@@ -51,5 +51,17 @@ export const sourcesVideos = [
     id: 'Porco Galliard',
     src: "https://res.cloudinary.com/daobmfotr/video/upload/v1652242630/my%20videos/Falco_eat_Porco_Galliards_Death_kjhyaq.mp4",
     poster: 'https://i0.wp.com/lamazmorradelfriki.com/wp-content/uploads/2022/01/Porco-Galliard-Galliard-Article-HEADER.png?fit=1400%2C700&ssl=1'
+  },
+
+  {
+    id: 'Pieck Finger',
+    src: "https://res.cloudinary.com/daobmfotr/video/upload/v1652243080/my%20videos/Pieck_shows_where_the_enemies_are_to_Eren_tdhigm.mp4",
+    poster: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/06/Pieck-points-at-Eren-Jaeger-e1623065095604.jpg'
+  },
+
+  {
+    id: 'Lara Tybur',
+    src: "https://res.cloudinary.com/daobmfotr/video/upload/v1652243587/my%20videos/Transformaci%C3%B3n_del_Titan_Martillo_de_Guerra_m_zol6gu.mp4",
+    poster: 'https://i.ytimg.com/vi/i76dn7QqpTs/maxresdefault.jpg'
   }
 ]
