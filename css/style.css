@@ -157,7 +157,7 @@ body {
   z-index: -1;
   top: -1%;
   left: -2%;
-  animation: spin 3.5s linear infinite;
+  animation: spin 3s linear infinite;
 }
 .card::after {
   position: absolute;
@@ -167,14 +167,14 @@ body {
   right: 0;
   z-index: -1;
   height: 90%;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
   transform: scale(0.9) translateY(-30px);
   filter: blur(calc(var(--card-height) / 8));
-  background-image: linear-gradient(var(--rotate), #f8aa0e, #fde300, #c20606);
+  background-image: linear-gradient(var(--rotate), #f8aa0e, #fde300, #c91b1b);
   opacity: 0;
   transition: opacity 0.5s;
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 .card:hover .char-img {
   transition: 0.7s;
