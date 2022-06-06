@@ -2,7 +2,6 @@ import { filterData } from './filters.js'
 import { loadingData } from './loading.js'
 import { createHumansCards } from './cards-humans.js'
 import { createTitansCards } from './cards-titans.js'
-import { revealImages } from './reveals-images.js'
 import { createModalHumans, createModalTitans } from './modals.js'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   filterData()
   fetchDataHumans()
   fetchDataTitans()
-  revealImages()
 })
 
 

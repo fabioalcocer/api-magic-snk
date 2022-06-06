@@ -26,7 +26,7 @@ body {
   padding-bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media (hover: hover) {
   .char-img {
     opacity: 1;
   }
@@ -72,8 +72,8 @@ body {
   min-width: 260px;
   max-width: 380px;
   margin: 2.5rem auto;
-  background: linear-gradient(90deg, #dd9609 0%, #ff04049f 100%);
-  background: #16141461;
+  background: linear-gradient(90deg, #dd9609 0%, rgba(255, 4, 4, 0.6235294118) 100%);
+  background: rgba(22, 20, 20, 0.3803921569);
   padding: 0.375rem;
   border-radius: 0.75rem;
   display: flex;
@@ -96,7 +96,7 @@ body {
   transition: 0.2s;
 }
 .filters__button:hover {
-  background-color: #a10707b9;
+  background-color: rgba(161, 7, 7, 0.7254901961);
 }
 
 .container__cards[data-content] {
@@ -207,7 +207,7 @@ body {
 ::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
-  background-color: #a1a9af;
+  background-color: hsl(207deg, 8%, 66%);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -216,7 +216,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #677179;
+  background-color: hsl(207deg, 8%, 44%);
 }
 
 /* <--------- ANIMATION LIGHTS CARDS---------> */
@@ -397,42 +397,34 @@ dialog::backdrop {
     max-width: 350px;
     max-height: 98%;
   }
-
   .modal__container {
     max-height: max-content;
     flex-direction: column;
   }
-
   .modal__picture {
     min-width: 88%;
     padding-top: 1rem;
     margin: 0;
   }
-
   .modal__img {
     min-width: 100%;
     height: 300px;
     border-radius: 15px;
   }
-
   .modal__body {
     padding: 1rem;
     padding-top: 0;
     padding-bottom: 1.2rem;
   }
-
   .modal__title {
     font-size: 1.7rem;
   }
-
   .modal__paragraph {
     font-size: 15px;
   }
-
   .modal__description {
     font-size: 1em;
   }
-
   .modal__btn {
     width: 90%;
     font-size: 15px;
