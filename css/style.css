@@ -26,7 +26,7 @@ body {
   padding-bottom: 30px;
 }
 
-@media (hover: hover) {
+@media (hover: none) {
   .char-img {
     opacity: 1;
   }
