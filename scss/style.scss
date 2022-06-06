@@ -25,21 +25,6 @@ body {
   padding-bottom: 30px;
 }
 
-<<<<<<< HEAD
-=======
-@media (hover: none) {
-  .char-img {
-    opacity: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .char-img {
-    opacity: 1;
-  }
-}
-
->>>>>>> 5078582b8281fc42b42b9ed1b4d9c6407983ca6d
 @import "./header";
 @import "./filters";
 @import "./cards-section";
