@@ -95,3 +95,9 @@
   opacity: 0;
   transition: .7s;
 }
+
+@media (hover: none) {
+  .char-img {
+    opacity: 1;
+  }
+}

@@ -26,11 +26,6 @@ body {
   padding-bottom: 30px;
 }
 
-@media (hover: none) {
-  .char-img {
-    opacity: 0;
-  }
-}
 /* <--------- HEADER ---------> */
 .main__header {
   position: relative;
@@ -193,6 +188,11 @@ body {
   transition: 0.7s;
 }
 
+@media (hover: none) {
+  .char-img {
+    opacity: 1;
+  }
+}
 /* <--------- FOOTER ---------> */
 .main__footer {
   width: 100%;
