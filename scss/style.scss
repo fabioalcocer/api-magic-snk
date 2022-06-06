@@ -31,6 +31,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .char-img {
+    opacity: 1;
+  }
+}
+
 @import "./header";
 @import "./filters";
 @import "./cards-section";
