@@ -52,6 +52,3 @@ const fetchDataTitans = async () => {
 };
 
 
-//TODO ver si podemos cambiar el src del video con JS
-
-

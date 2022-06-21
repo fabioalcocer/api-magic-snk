@@ -4,12 +4,14 @@ const dialog = document.querySelector(".modal");
 const modal = document.querySelector('.modal')
 const cancel = document.querySelector(".modal__close");
 const sectionCards = document.querySelector('.container__cards')
+const sectionCardsTitans = document.querySelector('#titans')
 const filterTabs = document.querySelector('.filters__content')
 const videoPlayer = document.querySelector('.wrapper')
 
 let dataHumans = []
 let dataTitans = []
 let characterID = ''
+let titanID = ''
 
 document.addEventListener('click', (e) => {
   cancel.addEventListener("click", () => {
@@ -41,6 +43,8 @@ document.addEventListener('click', (e) => {
   }
 
   if (e.target.dataset.nameTitan) {
+    titanID = e.target.dataset.nameTitan;
+
     const titanFiltered = dataTitans.filter((titan) => {
       return titan.name === e.target.dataset.nameTitan
     })
@@ -53,14 +57,24 @@ document.addEventListener('click', (e) => {
 
     dialog.showModal()
     disableScroll()
+
+    changeSrc(titanID);
   }
 
   if (e.target.id === "video-btn") {
     sectionCards.classList.add('d-none')
+    sectionCardsTitans.classList.add('d-none')
     filterTabs.classList.add('d-none')
     videoPlayer.classList.remove('d-none')
     dialog.close()
     enableScroll()
+  }
+
+  if(e.target.id === "back-btn") {
+    sectionCards.classList.remove("d-none");
+    sectionCardsTitans.classList.remove("d-none");
+    filterTabs.classList.remove("d-none");
+    videoPlayer.classList.add("d-none");
   }
 })
 
@@ -88,7 +102,6 @@ const changeSrc = (id) => {
   video.poster = character[0].poster;
   video.src = character[0].src;
 }
-
 
 const disableScroll = () => {
   var x = window.scrollX;

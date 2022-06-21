@@ -15,7 +15,7 @@
   object-fit: cover;
 }
 
-.modal__video {
+.btn-back {
   width: 60%;
   min-width: 210px;
   max-width: 240px;
@@ -36,19 +36,19 @@
   transition: background-color 0.5s;
 }
 
-.modal__video i {
+.btn-back i {
   font-size: 1.5rem;
   margin-left: 1rem;
 }
 
-.modal__video:hover {
+.btn-back:hover {
   background-color: transparent;
   outline: 2px solid #790000;
   transition: background-color 0.5s;
 }
 
 @media (max-width: 500px) {
-  .modal__video {
+  .btn-back {
     padding: 1em 1em;
     font-size: 14px;
   }
